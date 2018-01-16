@@ -13,3 +13,11 @@ git push origin openjdk-imagemagick-v1.0
 git tag mysql-phpfpm-v1.0
 git push origin mysql-phpfpm-v1.0
 ```
+
+# liquibaseを変更した場合
+
+```bash
+# liquibase-vX.xでタグ付けしてpushするとdocker buildも動きます
+git tag liquibase-v1.0
+git push origin liquibase-v1.0
+```
