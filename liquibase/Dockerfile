@@ -6,5 +6,5 @@ COPY ./lib/mysql-connector-java-5.1.38-bin.jar /opt/liquibase/mysql-connector-ja
 RUN tar -xzf /tmp/liquibase-3.5.3-bin.tar.gz -C /opt/liquibase && \
     chmod +x /opt/liquibase/liquibase && \
     ln -s /opt/liquibase/liquibase /usr/local/bin/
-VOLUME ["/changelogs"]
-
+COPY ./scripts /scripts
+RUN chmod -R +x /scripts
