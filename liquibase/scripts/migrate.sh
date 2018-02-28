@@ -30,6 +30,8 @@ if [ -z "${SCHEME}" ]; then
   exit 1
 fi
 
+echo "start migration.[file=${TARGET_CHENGE_LOG}]"
+
 liquibase --driver=com.mysql.jdbc.Driver \
      --classpath=/opt/liquibase/mysql-connector-java.jar \
      --changeLogFile=${TARGET_CHENGE_LOG} \
@@ -37,3 +39,5 @@ liquibase --driver=com.mysql.jdbc.Driver \
      --username=${USER} \
      --password=${PASSWORD} \
      migrate
+
+echo "finished migration."
