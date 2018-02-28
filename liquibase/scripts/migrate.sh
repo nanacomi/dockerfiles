@@ -34,7 +34,7 @@ echo "start migration.[file=${TARGET_CHANGE_LOG}]"
 
 liquibase --driver=com.mysql.jdbc.Driver \
      --classpath=/opt/liquibase/mysql-connector-java.jar \
-     --changeLogFile=${TARGET_CHENGE_LOG} \
+     --changeLogFile=${TARGET_CHANGE_LOG} \
      --url="jdbc:mysql://${HOST}:${PORT}/${SCHEME}" \
      --username=${USER} \
      --password=${PASSWORD} \
