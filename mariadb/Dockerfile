@@ -1,4 +1,4 @@
-FROM mariadb:10.3.5
+FROM bitnami/mariadb:10.2
 
 RUN apt-get update && \
     apt-get install -y locales && \
