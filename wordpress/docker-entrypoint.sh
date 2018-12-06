@@ -207,14 +207,6 @@ EOPHP
 			fi
 			sed -ri -e "s/($start\s*).*($end)$/\1$(sed_escape_rhs "$(php_escape "$value" "$var_type")")\3/" wp-config.php
 		}
-        if [ ! -e wp-config.php ]; then
-            set_config 'DB_HOST' "$WORDPRESS_DB_HOST"
-		    set_config 'DB_USER' "$WORDPRESS_DB_USER"
-		    set_config 'DB_PASSWORD' "$WORDPRESS_DB_PASSWORD"
-		    set_config 'DB_NAME' "$WORDPRESS_DB_NAME"
-		    set_config 'DB_CHARSET' "$WORDPRESS_DB_CHARSET"
-		    set_config 'DB_COLLATE' "$WORDPRESS_DB_COLLATE"
-        fi
 
 		for unique in "${uniqueEnvs[@]}"; do
 			uniqVar="WORDPRESS_$unique"
